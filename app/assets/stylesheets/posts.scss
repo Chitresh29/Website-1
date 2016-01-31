@@ -1,0 +1,25 @@
+#post{
+
+	a {
+		color: green;
+		border: solid 1px green;
+		padding: 5px;
+		border-radius: 4px;
+	}
+
+	a:hover{
+		text-decoration: none;
+	}
+
+	p {
+		margin: .1em 0px;
+	}
+
+	.special-buttons{
+		margin: 1em 0;
+		text-align: center;
+		width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+}

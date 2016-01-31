@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Test Website</title>
+  <%= stylesheet_link_tag "application", :media => "all" %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+<header class="clearfix">
+	<%= link_to "Daniel Milholland", welcome_index_path , id: 'logo' %>
+	<nav id="nav">
+		<ul>
+			<li>
+				<%= link_to "Blog", posts_path %>
+			</li>
+			<li>
+				<%= link_to "Contact", new_contact_path %>
+			</li>
+			<li>
+				<%= link_to "Resume", resume_index_path %>
+			</li>
+			<% if admin_signed_in? %>
+			<li>
+				<%= link_to "Sign out", destroy_admin_session_path, method: :delete %>
+			</li>
+			<% end %>
+		</ul>
+	</nav>
+	</header>	
+	<div class="wrapper clearfix">
+	<% if notice %>
+  		<p class="alert alert-success"><%= notice %></p>
+	<% end %>
+	<% if alert %>
+  		<p class="alert alert-danger"><%= alert %></p>
+	<% end %>
+		<%= yield %>
+	</div>
+
+</body>
+</html>
