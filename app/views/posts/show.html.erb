@@ -2,8 +2,33 @@
 	<h1><%= @post.title %></h1>
 	<div class="wrapper">
 		<p><%= @post.content %></p>
-		<%= link_to "List All", posts_path %>
-		<%= link_to "Edit", edit_post_path%>
-		<%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
+		<br>
+		<%= link_to "All Blogs", posts_path %>
+		<% if admin_signed_in? %>
+			<%= link_to "Edit", edit_post_path%>
+			<%= link_to "Delete", post_path, method: :delete, data: {confirm: "Are you sure?"} %>
+		<% end %>
+		<br>
+		<br>
+		<div id="disqus_thread"></div>
+		<script>
+			/*
+			var disqus_config = function () {
+			this.page.url = <%=request.host%>;
+			this.page.identifier = <%=request.fullpath;
+			};
+			*/
+			(function() { // DON'T EDIT BELOW THIS LINE
+			var d = document, s = d.createElement('script');
+
+			s.src = '//milhound.disqus.com/embed.js';
+
+			s.setAttribute('data-timestamp', +new Date());
+			(d.head || d.body).appendChild(s);
+			})();
+		</script>
+		<noscript>
+		Please enable JavaScript to view the 	<a href="https://disqus.com/?ref_noscript" rel="nofollow">comments powered by Disqus.</a></noscript>
+
 	</div>
 </div>

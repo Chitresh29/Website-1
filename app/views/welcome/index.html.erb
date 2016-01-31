@@ -1,11 +1,32 @@
 <div id="main-content">
 	<h1>Welcome to my Website</h1>
-	<div id="about">
+	<div class="col-1">
+		<%= image_tag('Daniel.jpg', class: 'profile-pic')%>
+		<div id="contact">
+			<h3>Contact</h3>
+            <ul id="contact-list">
+                <li><a href="mailto:Daniel@gailwindslog.com?Subject=Milhound.com%20-%20(Contact)" target="_top">Email</a></li>
+                <li><a href="https://twitter.com/Milhound">Twitter</a></li>
+                <li><a href="https://www.linkedin.com/in/milholland">Linkedin</a></li>
+                <li><a href="skype:milhound?call" alt="Milhound">Skype</a></li>
+                <li><a href="https://facebook.com/Milhound">Facebook</a></li>
+                <li><a href="https://youtube.com/c/Milhoundz">Youtube</a></li>
+                <li><a href="https://github.com/Milhound">GitHub</a>
+                </li>
+            </ul>
+        </div>
+	</div>
+	<div class="col-2">
 		<p>
-			Cred hammock seitan, squid YOLO hoodie keytar bushwick church-key plaid pickled. Man bun pour-over twee migas DIY YOLO. Selfies hashtag pitchfork, chia craft beer drinking vinegar venmo hammock typewriter green juice taxidermy affogato sriracha XOXO. Hella pinterest you probably haven't heard of them, asymmetrical single-origin coffee ennui austin artisan mlkshk. Literally tumblr tacos godard, man bun four dollar toast narwhal cliche knausgaard lo-fi swag pickled +1. +1 plaid retro hella, polaroid blog letterpress 90's normcore DIY readymade four loko. Kale chips pug pinterest slow-carb, hashtag viral bicycle rights VHS vegan photo booth austin.
+		Mlkshk blue bottle humblebrag 3 wolf moon mixtape. Twee try-hard forage austin, blue bottle cold-pressed shoreditch you probably haven't heard of them. Small batch narwhal bitters keytar yr waistcoat, tacos shabby chic venmo whatever heirloom meditation kale chips banjo. Meh craft beer disrupt +1, chartreuse flexitarian chillwave. Listicle plaid mlkshk, health goth keffiyeh vice celiac crucifix wolf cold-pressed. Chillwave seitan YOLO pug paleo. Fingerstache art party authentic truffaut offal cronut put a bird on it lo-fi, waistcoat four dollar toast artisan yr twee.
 		</p>
-		<p>
-			Pork belly kickstarter lo-fi biodiesel. Flannel cronut locavore selfies, blog street art distillery PBR&B actually fanny pack. Food truck fanny pack austin, twee quinoa actually intelligentsia trust fund schlitz. YOLO keffiyeh pitchfork, pinterest kogi godard brooklyn cardigan. Semiotics wolf fashion axe letterpress. Craft beer bushwick squid you probably haven't heard of them. Pickled slow-carb small batch artisan shoreditch, pour-over leggings marfa.
-		</p>
+		<div class="blog-posts">
+			<%= @post.each do |post| %>
+			<h4><%= post.title %></h4>
+			<%= truncate(post.content, :length => 50) %>
+			<%= link_to "Go To..", post_path(post) %>
+			<br>
+			<% end %>
+		</div>
 	</div>
 </div>

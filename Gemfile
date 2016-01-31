@@ -12,6 +12,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'sendgrid', '~> 1.2', '>= 1.2.4'
 gem 'mail_form', '~> 1.5', '>= 1.5.1'
+gem 'friendly_id', '~> 5.1'
 
 group :development, :test do
 

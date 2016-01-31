@@ -2,7 +2,51 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 #main-content{
-	p {
-		color: green;
+	.col-1{
+		display:block;
+		width: 30%;
+		max-width: 30%;
+		float:left;
+		margin-right: 5%;
+
+		.profile-pic{
+			border-radius: 1em;
+			width:100%;
+		}
+
+		#contact{
+			h1, h2, h3, h4, h5, h6{
+				text-align: center;
+				margin:0;
+				text-transform: uppercase;
+				text-decoration: underline;
+			}
+			ul{
+				list-style-type: none;
+				margin:0;
+				padding:0;
+
+				li{
+					text-align: center;
+					text-transform: uppercase;
+				}
+			}
+		}
+	}
+	.col-2{
+		display:block;
+		width: 65%;
+		float:right;
+		margin-top: 0;
+
+		.blog-posts{
+			h1, h2, h3, h4, h5, h6{
+				text-transform: uppercase;
+			}
+		}
+
+		p{
+			margin:0;
+		}
 	}
 }

@@ -1,8 +1,11 @@
+$link: #66A1D1;
+$highlight: #7BC3FF;
+
 #post{
 
 	a {
-		color: green;
-		border: solid 1px green;
+		color: $link;
+		border: solid 1px $link;
 		padding: 5px;
 		border-radius: 4px;
 	}
@@ -12,14 +15,36 @@
 	}
 
 	p {
-		margin: .1em 0px;
+		margin: 0;
+		border: solid 1px $link;
+		border-radius: 6px;
+		padding: .5em;
 	}
 
 	.special-buttons{
-		margin: 1em 0;
+		margin-top: .75em;
 		text-align: center;
 		width: 100%;
 		margin-left: auto;
 		margin-right: auto;
+		margin-bottom: -1em;
+	}
+
+	.decoration{
+		display: block;
+		margin:.75em 0;
+		padding:0;
+		width: 4em;
+		height: 2px;
+		border: none;
+		border-radius: 1px;
+		background-color: $highlight
+	}
+	.content {
+		margin-bottom: 0;
+		a {
+		float:right;
+		margin-right: 1em;
+		}
 	}
 }

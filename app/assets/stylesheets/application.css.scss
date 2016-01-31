@@ -8,6 +8,9 @@ $highlight: #7BC3FF;
 
 @import 'normalize';
 
+html, body {
+	font-family: 'Work Sans', sans-serif;
+}
 .clearfix:before, .clearfix:after {
 	content:"";
 	display:table;
@@ -134,6 +137,15 @@ header{
 	margin-left: auto;
 	margin-right: auto;
 	text-align: center;
+}
+
+.title{
+	line-height: .3em;
+	width: 100%;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	text-transform: uppercase;
 }
 
 .hidden{

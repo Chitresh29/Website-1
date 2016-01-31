@@ -1,7 +1,6 @@
 <div id="post">
 
-	<h1>List Posts</h1>
-	<hr>
+	<h1 class='title'>blog</h1>
 	<% if admin_signed_in? %>
 		<div class="special-buttons">
 			<%= link_to "New", new_post_path%>
@@ -9,12 +8,16 @@
 	<% end %>
 	<% @post.each do |post| %>
 		<h3><%= post.title %></h3>
-		<p><%= post.content %></p>
-		<br>
-		<% if admin_signed_in? %>
-			<%= link_to "Edit", edit_post_path(post)%>
-			<%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure?"}  %>
-		<% end %>
+		<hr class="decoration">
+		<div class="content">
+			<p><%= post.content %></p>
+			<br>
+			<%= link_to "View", post_path(post) %>
+			<% if admin_signed_in? %>
+				<%= link_to "Delete", post_path(post), method: :delete, data: {confirm: "Are you sure?"}  %>
+				<%= link_to "Edit", edit_post_path(post)%>
+			<% end %>
+		</div>
 	<% end %>
 	<br>
 </div>
