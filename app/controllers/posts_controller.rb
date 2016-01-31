@@ -3,7 +3,7 @@ class PostsController < ApplicationController
 	before_action :authenticate_admin!, except: [:index, :show]
 	
 	def index
-		@post = Post.all.order('created_at desc')
+		@post = Post.order('created_at desc').all
 	end
 
 	def show

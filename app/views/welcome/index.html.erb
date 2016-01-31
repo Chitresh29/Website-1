@@ -20,12 +20,14 @@
 		<p>
 		Mlkshk blue bottle humblebrag 3 wolf moon mixtape. Twee try-hard forage austin, blue bottle cold-pressed shoreditch you probably haven't heard of them. Small batch narwhal bitters keytar yr waistcoat, tacos shabby chic venmo whatever heirloom meditation kale chips banjo. Meh craft beer disrupt +1, chartreuse flexitarian chillwave. Listicle plaid mlkshk, health goth keffiyeh vice celiac crucifix wolf cold-pressed. Chillwave seitan YOLO pug paleo. Fingerstache art party authentic truffaut offal cronut put a bird on it lo-fi, waistcoat four dollar toast artisan yr twee.
 		</p>
+		<h3>Recent Blog Posts</h3>
 		<div class="blog-posts">
-			<%= @post.each do |post| %>
-			<h4><%= post.title %></h4>
-			<%= truncate(post.content, :length => 50) %>
-			<%= link_to "Go To..", post_path(post) %>
-			<br>
+			<% @post.each do |post| %>
+				<h5><%= post.title %></h5>
+				<p>
+					<%= truncate(post.content, :length => 50) %>
+					<%= link_to "Go To..", post_path(post) %>
+				</p>
 			<% end %>
 		</div>
 	</div>

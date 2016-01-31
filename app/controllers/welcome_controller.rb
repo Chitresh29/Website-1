@@ -1,5 +1,5 @@
 class WelcomeController < ApplicationController
 	def index
-		@post = Post.all.order('created_at desc')
+		@post = Post.order('created_at desc').first('3')
 	end
 end

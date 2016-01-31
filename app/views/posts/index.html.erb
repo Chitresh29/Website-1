@@ -12,11 +12,11 @@
 		<div class="content">
 			<p><%= post.content %></p>
 			<br>
-			<%= link_to "View", post_path(post) %>
 			<% if admin_signed_in? %>
-				<%= link_to "Delete", post_path(post), method: :delete, data: {confirm: "Are you sure?"}  %>
+				<%= link_to "Delete", posts_path(post), method: :delete, data: {confirm: "Are you sure?"}  %>
 				<%= link_to "Edit", edit_post_path(post)%>
 			<% end %>
+			<%= link_to "View", post_path(post) %>
 		</div>
 	<% end %>
 	<br>

@@ -33,6 +33,7 @@
 			}
 		}
 	}
+
 	.col-2{
 		display:block;
 		width: 65%;
@@ -42,6 +43,11 @@
 		.blog-posts{
 			h1, h2, h3, h4, h5, h6{
 				text-transform: uppercase;
+			}
+			margin-left: 3%;
+
+			p{
+				font-size: 12px;
 			}
 		}
 
