@@ -1,12 +1,12 @@
 <div id="post">
 	<h1><%= @post.title %></h1>
-	<div class="wrapper">
-		<p><%= @post.content %></p>
+	<div id="blog" class="wrapper">
+		<p><%= markdown @post.content %></p>
 		<br>
 		<%= link_to "All Blogs", posts_path %>
 		<% if admin_signed_in? %>
 			<%= link_to "Edit", edit_post_path%>
-			<%= link_to "Delete", post_path, method: :delete, data: {confirm: "Are you sure?"} %>
+			<%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
 		<% end %>
 		<br>
 		<br>

@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag "application", :media => "all" %>
   <link href='https://fonts.googleapis.com/css?family=Work+Sans:400,700' rel='stylesheet' type='text/css'>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -12,6 +13,9 @@
 	<%= link_to "Daniel Milholland", welcome_index_path , id: 'logo' %>
 	<nav id="nav">
 		<ul>
+			<li class="mini-screen">
+				<%= link_to "Home", root_path %>
+			</li>
 			<li>
 				<%= link_to "Blog", posts_path %>
 			</li>

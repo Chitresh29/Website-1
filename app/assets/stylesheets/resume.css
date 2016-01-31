@@ -1,1 +1,1 @@
-#resume p{margin-left:3%}#resume span{float:right}
+#resume p{margin-left:3%}#resume span{float:right}@media screen and (max-width: 667px) and (orientation: portrait){#resume span{font-size:.8em;font-weight:bold;font-style:italic;display:inline}}

@@ -35,7 +35,7 @@ class PostsController < ApplicationController
 
 	def destroy
 		@post.destroy
-		render 'posts/index'
+		redirect_to :posts
 	end
 
 	private

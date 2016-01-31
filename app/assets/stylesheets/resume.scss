@@ -8,3 +8,13 @@
 		float:right;
 	}
 }
+@media screen and (max-width: 667px) and (orientation: portrait){
+	#resume{
+		span{
+			font-size: .8em;
+			font-weight: bold;
+			font-style: italic;
+			display:inline;
+		}
+	}
+}

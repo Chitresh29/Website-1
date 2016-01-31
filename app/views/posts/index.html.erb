@@ -10,10 +10,10 @@
 		<h3><%= post.title %></h3>
 		<hr class="decoration">
 		<div class="content">
-			<p><%= post.content %></p>
+			<p><%= markdown truncate( post.content, :length => 50) %></p>
 			<br>
 			<% if admin_signed_in? %>
-				<%= link_to "Delete", posts_path(post), method: :delete, data: {confirm: "Are you sure?"}  %>
+				<%= link_to "Delete", post_path(post), method: :delete, data: {confirm: "Are you sure?"}  %>
 				<%= link_to "Edit", edit_post_path(post)%>
 			<% end %>
 			<%= link_to "View", post_path(post) %>

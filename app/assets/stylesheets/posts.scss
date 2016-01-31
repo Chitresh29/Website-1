@@ -14,11 +14,10 @@ $highlight: #7BC3FF;
 		text-decoration: none;
 	}
 
-	p {
-		margin: 0;
-		border: solid 1px $link;
-		border-radius: 6px;
-		padding: .5em;
+	#blog{
+		p{
+			border:none;
+		}
 	}
 
 	.special-buttons{
@@ -42,6 +41,8 @@ $highlight: #7BC3FF;
 	}
 	.content {
 		margin-bottom: 0;
+
+		margin-left: 3%;
 		a {
 		float:right;
 		margin-right: 1em;

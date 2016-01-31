@@ -22,6 +22,9 @@ html, body {
 input, textarea {
 	display:block;
 }	
+.mini-screen {
+	display: none;
+}
 
 textarea{
 	width: 100%;
@@ -151,3 +154,20 @@ header{
 .hidden{
 	display:none !important;
 }
+@media screen and (max-width: 667px) and (orientation: portrait){
+	#logo {
+		display: none;
+	}
+
+	nav {
+		float: none;
+		width: 100%;
+		text-align: center;
+	}
+
+	.mini-screen{
+		display: inline;
+	}
+}
+
+@import 'highlight';
