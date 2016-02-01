@@ -4,14 +4,16 @@ $highlight: #7BC3FF;
 #main-content{
 	.col-1{
 		display:block;
-		width: 30%;
-		max-width: 30%;
+		max-width: 20%;
 		float:left;
-		margin-right: 5%;
+		text-align: center;
+		margin-right: 1.5%;
 
 		.profile-pic{
 			border-radius: 1em;
-			width:100%;
+			max-width:100%;
+			max-height: 30%;
+			text-align: center;
 		}
 
 		#contact{
@@ -35,8 +37,8 @@ $highlight: #7BC3FF;
 	}
 
 	.col-2{
-		display:block;
-		width: 65%;
+		display:inline-block;
+		width: 78.5%;
 		float:right;
 		margin-top: 0;
 

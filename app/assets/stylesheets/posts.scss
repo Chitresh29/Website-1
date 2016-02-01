@@ -9,12 +9,33 @@ $highlight: #7BC3FF;
 		padding: 5px;
 		border-radius: 4px;
 	}
+	#blog-title{
+		display:inline;
+	}
+
+	#socialbtns{
+		
+		font-size: 1em;
+		display: inline;
+		margin-top: 1rem;
+		display: inline;
+		float: right;
+		a {	
+			padding:0 0 .5em .5em;
+			color: $link;
+			border: none;
+		}
+		a:hover{
+			color: $highlight;
+		}
+	}
 
 	a:hover{
 		text-decoration: none;
 	}
 
 	#blog{
+		padding-top: 2em;
 		p{
 			border:none;
 		}

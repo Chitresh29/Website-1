@@ -1,7 +1,13 @@
 <div id="post">
-	<h1><%= @post.title %></h1>
 	<div id="blog" class="wrapper">
-		<p><%= markdown @post.content %></p>
+		<h1 id="blog-title"><%= @post.title %></h1>
+		<div id="socialbtns">
+		SHARE:
+			<span onclick="javascript:window.open('https://twitter.com/home?status=<%= @post.title %>%20-%20by%20%40Milhound%20%20<%= url_for(:only_path => false) %>', '_blank', 'toolbar=no,width=500, height=300, left=450, top=200');" class="socicon-twitter"></span>
+			<span onclick="javascript:window.open('https://www.facebook.com/sharer.php?u=<%= url_for(:only_path => false) %>', '_blank', 'toolbar=no, width=500, height=300, left=450, top=200');" class="socicon-facebook"></span>
+			<span onclick="javascript:window.open('https://plus.google.com/share?url=<%= url_for(:only_path => false) %>', '_blank', 'toolbar=no,width=500, height=300, left=450, top=200');" class="socicon-googleplus"></span>
+		</div>
+		<p class="clearfix"><%= markdown @post.content %></p>
 		<br>
 		<%= link_to "All Blogs", posts_path %>
 		<% if admin_signed_in? %>

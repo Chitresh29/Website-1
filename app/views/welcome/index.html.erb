@@ -25,7 +25,7 @@
 			<% @post.each do |post| %>
 				<h5><%= post.title %></h5>
 				<p>
-					<%= truncate(post.content, :length => 50) %>
+					<%= markdown truncate(post.content, :length => 50) %>
 					<%= link_to "Go To..", post_path(post) %>
 				</p>
 			<% end %>
