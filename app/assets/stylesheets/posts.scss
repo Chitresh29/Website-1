@@ -11,6 +11,7 @@ $highlight: #7BC3FF;
 	}
 	#blog-title{
 		display:inline;
+		text-transform: uppercase;
 	}
 
 	#socialbtns{
@@ -20,11 +21,7 @@ $highlight: #7BC3FF;
 		margin-top: 1rem;
 		display: inline;
 		float: right;
-		a {	
-			padding:0 0 .5em .5em;
-			color: $link;
-			border: none;
-		}
+
 		a:hover{
 			color: $highlight;
 		}
